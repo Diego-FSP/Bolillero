@@ -1,0 +1,12 @@
+c:\Users\Lab15-PC01\Documents\GitHub\Bolillero\BolilleroCore\bin\Debug\net9.0\BolilleroCore.deps.json
+c:\Users\Lab15-PC01\Documents\GitHub\Bolillero\BolilleroCore\bin\Debug\net9.0\BolilleroCore.dll
+c:\Users\Lab15-PC01\Documents\GitHub\Bolillero\BolilleroCore\bin\Debug\net9.0\BolilleroCore.pdb
+c:\Users\Lab15-PC01\Documents\GitHub\Bolillero\BolilleroCore\obj\Debug\net9.0\BolilleroCore.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\Lab15-PC01\Documents\GitHub\Bolillero\BolilleroCore\obj\Debug\net9.0\BolilleroCore.AssemblyInfoInputs.cache
+c:\Users\Lab15-PC01\Documents\GitHub\Bolillero\BolilleroCore\obj\Debug\net9.0\BolilleroCore.AssemblyInfo.cs
+c:\Users\Lab15-PC01\Documents\GitHub\Bolillero\BolilleroCore\obj\Debug\net9.0\BolilleroCore.csproj.CoreCompileInputs.cache
+c:\Users\Lab15-PC01\Documents\GitHub\Bolillero\BolilleroCore\obj\Debug\net9.0\BolilleroCore.sourcelink.json
+c:\Users\Lab15-PC01\Documents\GitHub\Bolillero\BolilleroCore\obj\Debug\net9.0\BolilleroCore.dll
+c:\Users\Lab15-PC01\Documents\GitHub\Bolillero\BolilleroCore\obj\Debug\net9.0\refint\BolilleroCore.dll
+c:\Users\Lab15-PC01\Documents\GitHub\Bolillero\BolilleroCore\obj\Debug\net9.0\BolilleroCore.pdb
+c:\Users\Lab15-PC01\Documents\GitHub\Bolillero\BolilleroCore\obj\Debug\net9.0\ref\BolilleroCore.dll

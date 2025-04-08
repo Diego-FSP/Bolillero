@@ -2,7 +2,7 @@ using BolilleroClass;
 
 namespace LogicaClass;
 
-class Azar: Logica
+public class Azar: Logica
 {
     Random azar= new Random();
     public override void SacarBolillas(Bolillero bolillero)

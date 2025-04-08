@@ -1,7 +1,7 @@
 using BolilleroClass;
 namespace LogicaClass;
 
-class Orden: Logica
+public class Orden: Logica
 {
     public override void SacarBolillas(Bolillero bolillero)
     {

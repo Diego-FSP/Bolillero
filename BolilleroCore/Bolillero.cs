@@ -4,11 +4,11 @@ namespace BolilleroClass;
 
 public class Bolillero
 {
-    public List<short> Bolillas;
-    public List<short> SBolillas;
+    public List<short> Bolillas= new List<short>();
+    public List<short> SBolillas= new List<short>();
     public short NVeces;
 
-    Logica Metodo;
+    public Logica Metodo;
 
     public Bolillero(short CantidadB)
     {
@@ -43,7 +43,17 @@ public class Bolillero
 
     public void SacarBolillas()
     {
-        Metodo.SacarBolillas(this);
+            Metodo.SacarBolillas(this);
+    }
+
+    public bool Gano(List<short> c)
+    {
+        bool rta=true;
+        for(short b=0;b<SBolillas.Count;b++)
+        if(c[b]!=Bolillas[b])
+        rta=false;
+
+        return rta;
     }
 }
 
