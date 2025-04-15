@@ -1,6 +1,7 @@
 ﻿namespace BolilleroTest;
 using LogicaClass;
 using BolilleroClass;
+using Microsoft.VisualBasic;
 
 public class BolilleroTest
 {
@@ -42,34 +43,32 @@ public class BolilleroTest
     {
         bolillero= new Bolillero([0,1,2,3]);
         bolillero.Metodo= new Orden();
-        bolillero.SacarBolillas();
-        bolillero.SacarBolillas();
-        bolillero.SacarBolillas();
-        bolillero.SacarBolillas();
 
-        bool rta= bolillero.Gano([0,1,2,3]);
-        Assert.Equal(true,rta);
-        
+        var rta= Task<long>.Run( ()=> bolillero.Jugar([0,1,2]));
+        rta.Wait();
+        Assert.Equal(true, rta.Result);
     }
 
-}
-/*
-public void TestSacarBolilla()
+    [Fact]
+    public void JugarPierde()
     {
-        BolilleroTest(10);
-        Console.WriteLine("N° bolitas contenidas: "+bolillero.Bolillas.Count);
-        Console.WriteLine("N° bolitas sacadas: "+bolillero.SBolillas.Count);
-        Console.WriteLine("");
-        
-        bolillero.SacarBolillas();
-        Console.WriteLine("N° bolitas contenidas: "+bolillero.Bolillas.Count);
-        Console.WriteLine("N° bolitas sacadas: "+bolillero.SBolillas.Count);
-
-    }
-
-public BolilleroTest(int Cantidad)
-    {
-        bolillero= new Bolillero(Cantidad);
+        bolillero= new Bolillero([4,2,1]);
         bolillero.Metodo= new Orden();
+
+        var rta= Task<long>.Run( ()=> bolillero.Jugar([0,1,2]));
+        rta.Wait();
+        Assert.Equal(false, rta.Result);
     }
-*/
+
+    [Fact]
+    public void GanarNveces()
+    {
+        bolillero= new Bolillero([0,1]);
+        bolillero.Metodo= new Orden();
+
+        var rta= Task<long>.Run(()=> bolillero.JugarNVeces([0,1],1));
+        rta.Wait();
+        Assert.Equal(1, rta.Result);
+    }
+}
+

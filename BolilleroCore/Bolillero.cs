@@ -16,19 +16,11 @@ public class Bolillero
         {
             Bolillas.Add(b);
         }
-        NVeces=1;
     }
 
     public Bolillero(List<short> cantidad)
     {
         Bolillas=cantidad;
-        NVeces=1;
-    }
-
-    public Bolillero(List<short> cantidad, short veces)
-    {
-        Bolillas=cantidad;
-        NVeces=veces;
     }
 
     public void DevolverBolillas()
@@ -46,14 +38,30 @@ public class Bolillero
             Metodo.SacarBolillas(this);
     }
 
-    public bool Gano(List<short> c)
+    public bool Jugar(List<short> c)
     {
         bool rta=true;
-        for(short b=0;b<SBolillas.Count;b++)
-        if(c[b]!=Bolillas[b])
-        rta=false;
+        for(short b=0;b<c.Count;b++)
+        {
+            SacarBolillas();
+            if(c[b]!=SBolillas[b])
+            rta=false;
+        }
+        
+    return rta;
+    }
 
-        return rta;
+    public short JugarNVeces(List<short> jugada, short cantidad)
+    {
+        short gano=0;
+        for(short c=0;c<cantidad;c++)
+        {
+            if(Jugar(jugada))
+            gano++;
+
+            DevolverBolillas();
+        }
+        return gano;
     }
 }
 
