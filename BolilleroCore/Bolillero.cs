@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using LogicaClass;
+using Microsoft.VisualBasic;
 namespace BolilleroClass;
 
 public class Bolillero
@@ -62,6 +63,11 @@ public class Bolillero
             DevolverBolillas();
         }
         return gano;
+    }
+
+    public Bolillero Clonar()
+    {
+        return this;
     }
 }
 
