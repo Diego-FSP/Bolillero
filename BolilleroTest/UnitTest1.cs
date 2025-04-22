@@ -8,7 +8,7 @@ public class BolilleroTest
     public BolilleroTest()
     {
         bolillero = new Bolillero(10);
-        bolillero.Metodo = new Azar();
+        bolillero.Metodo = new Orden();
     }
 
     [Fact]
