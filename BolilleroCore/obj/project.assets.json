@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Lab15-PC01\\Documents\\GitHub\\Bolillero\\BolilleroCore\\BolilleroCore.csproj",
+      "projectUniqueName": "c:\\Users\\Lab15-PC01\\Documents\\GitHub\\Bolillero\\BolilleroCore\\BolilleroCore.csproj",
       "projectName": "BolilleroCore",
-      "projectPath": "C:\\Users\\Lab15-PC01\\Documents\\GitHub\\Bolillero\\BolilleroCore\\BolilleroCore.csproj",
+      "projectPath": "c:\\Users\\Lab15-PC01\\Documents\\GitHub\\Bolillero\\BolilleroCore\\BolilleroCore.csproj",
       "packagesPath": "C:\\Users\\Lab15-PC01\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Lab15-PC01\\Documents\\GitHub\\Bolillero\\BolilleroCore\\obj\\",
+      "outputPath": "c:\\Users\\Lab15-PC01\\Documents\\GitHub\\Bolillero\\BolilleroCore\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

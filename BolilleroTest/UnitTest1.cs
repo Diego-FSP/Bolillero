@@ -1,11 +1,15 @@
 ﻿namespace BolilleroTest;
 using LogicaClass;
 using BolilleroClass;
-using Microsoft.VisualBasic;
 
 public class BolilleroTest
 {
     Bolillero bolillero;
+    public BolilleroTest()
+    {
+        bolillero = new Bolillero(10);
+        bolillero.Metodo = new Azar();
+    }
 
     [Fact]
     public void SacarBolilla()
@@ -24,8 +28,6 @@ public class BolilleroTest
     [Fact]
     public void Reingresar()
     {
-        bolillero= new Bolillero(10);
-        bolillero.Metodo= new Orden();
         Assert.Equal(10,bolillero.Bolillas.Count);
 
         bolillero.SacarBolillas();
@@ -41,8 +43,6 @@ public class BolilleroTest
     [Fact]
     public void JugarGana()
     {
-        bolillero= new Bolillero([0,1,2,3]);
-        bolillero.Metodo= new Orden();
 
         var rta= Task<long>.Run( ()=> bolillero.Jugar([0,1,2]));
         rta.Wait();
@@ -52,10 +52,8 @@ public class BolilleroTest
     [Fact]
     public void JugarPierde()
     {
-        bolillero= new Bolillero([4,2,1]);
-        bolillero.Metodo= new Orden();
 
-        var rta= Task<long>.Run( ()=> bolillero.Jugar([0,1,2]));
+        var rta= Task<long>.Run( ()=> bolillero.Jugar([4,2,1]));
         rta.Wait();
         Assert.Equal(false, rta.Result);
     }
@@ -63,12 +61,17 @@ public class BolilleroTest
     [Fact]
     public void GanarNveces()
     {
-        bolillero= new Bolillero([0,1]);
-        bolillero.Metodo= new Orden();
 
         var rta= Task<long>.Run(()=> bolillero.JugarNVeces([0,1],1));
         rta.Wait();
         Assert.Equal(1, rta.Result);
     }
-}
 
+    [Fact]
+    public void HiloUso()
+    {
+        Simulacion simulacion= new Simulacion();
+        int rta = simulacion.SimularConHilos(bolillero,[0,1,2,3,4,5,6,7,8,9],100,50);
+        Assert.Equal(100, rta);
+    }
+}

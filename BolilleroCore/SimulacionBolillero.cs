@@ -1,24 +1,32 @@
 using LogicaClass;
 using BolilleroClass;
-class Simulacion
+using System.Threading.Tasks;
+public class Simulacion
 {
-    public short SimularSinHilos(Bolillero bolillero, List<short> Jugada, short CVeces)
+    public int SimularSinHilos(Bolillero bolillero, List<int> Jugada, int CVeces)
     {
-        short gano=bolillero.JugarNVeces(Jugada,CVeces);
+        int gano=bolillero.JugarNVeces(Jugada,CVeces);
         
         return gano;
     }
 
-    public long SimularConHilos(Bolillero bolillero, List<short> Jugada, short CVeces, short CHilos)
+    public int SimularConHilos(Bolillero bolillero, List<int> Jugada, int CVeces, int CHilos)
     {
-        short gano=0;
-        Task<short>[] tareas= new Task<short>[CHilos];
-        for(short h=0;h<CHilos;h++)
+        int gano=0;
+        Task<int>[] tareas= new Task<int>[CHilos];
+        
+        for(int h=0;h<CHilos;h++)
         {
-            var b =bolillero.Clonar();
-            tareas[h]=  Task<short>.Run(()=> bolillero.JugarNVeces(Jugada,CVeces));
+            //Bolillero b = bolillero;
+            tareas[h]=  Task.Run<int>(()=> bolillero.Clonar().JugarNVeces(Jugada,CVeces / CHilos));
         }
         
+        Task<int>.WaitAll();
+
+        for(int h=0;h<CHilos;h++)
+        {
+            gano+=tareas[h].Result;
+        }
         return gano;
     }
 }

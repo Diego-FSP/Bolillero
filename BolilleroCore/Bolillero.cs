@@ -1,36 +1,33 @@
-using System.Collections.Generic;
 using LogicaClass;
-using Microsoft.VisualBasic;
 namespace BolilleroClass;
 
 public class Bolillero
 {
-    public List<short> Bolillas= new List<short>();
-    public List<short> SBolillas= new List<short>();
-    public short NVeces;
+    public List<int> Bolillas= new List<int>();
+    public List<int> SBolillas= new List<int>();
+    public int NVeces;
 
     public Logica Metodo;
 
-    public Bolillero(short CantidadB)
+    public Bolillero(int CantidadB)
     {
-        for(short b=0;b<CantidadB;b++)
+        for(int b=0;b<CantidadB;b++)
         {
             Bolillas.Add(b);
         }
     }
 
-    public Bolillero(List<short> cantidad)
+    private Bolillero(Bolillero original)
     {
-        Bolillas=cantidad;
+        Metodo = original.Metodo;
+        Bolillas = new List<int>(original.Bolillas);
+        SBolillas = new List<int>(original.SBolillas);
     }
 
     public void DevolverBolillas()
     {
         if(SBolillas.Count>0)
-        for(int n=0;n< SBolillas.Count;n++)
-        {
-            Bolillas.Add(SBolillas[n]);
-        }
+            Bolillas.AddRange(SBolillas);
         SBolillas.Clear();
     }
 
@@ -39,35 +36,30 @@ public class Bolillero
             Metodo.SacarBolillas(this);
     }
 
-    public bool Jugar(List<short> c)
-    {
-        bool rta=true;
-        for(short b=0;b<c.Count;b++)
+    public bool Jugar(List<int> c)
+    {        
+        for(int b=0;b<c.Count;b++)
         {
             SacarBolillas();
             if(c[b]!=SBolillas[b])
-            rta=false;
-        }
-        
-    return rta;
+            return false;
+        }        
+        return true;
     }
 
-    public short JugarNVeces(List<short> jugada, short cantidad)
+    public int JugarNVeces(List<int> jugada, int cantidad)
     {
-        short gano=0;
-        for(short c=0;c<cantidad;c++)
+        int gano=0;
+        for(int c=0;c<cantidad;c++)
         {
             if(Jugar(jugada))
-            gano++;
+                gano++;
 
             DevolverBolillas();
         }
         return gano;
     }
 
-    public Bolillero Clonar()
-    {
-        return this;
-    }
+    public Bolillero Clonar() => new Bolillero(this);
 }
 
