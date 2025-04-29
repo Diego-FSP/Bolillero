@@ -5,7 +5,6 @@ public class Bolillero
 {
     public List<int> Bolillas= new List<int>();
     public List<int> SBolillas= new List<int>();
-    public int NVeces;
 
     public Logica Metodo;
 

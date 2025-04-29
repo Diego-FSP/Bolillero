@@ -14,9 +14,6 @@ public class BolilleroTest
     [Fact]
     public void SacarBolilla()
     {
-        bolillero= new Bolillero(10);
-        bolillero.Metodo= new Orden();
-
         Assert.Equal(10,bolillero.Bolillas.Count);
         Assert.Equal(0,bolillero.SBolillas.Count);
         
@@ -68,10 +65,18 @@ public class BolilleroTest
     }
 
     [Fact]
+    public void SinHiloUso()
+    {
+        Simulacion simulacion= new Simulacion();
+        int rta = simulacion.SimularSinHilos(bolillero,[0,1,2,3,4,5,6,7,8,9],100);
+        Assert.Equal(100, rta);
+    }
+
+    [Fact]
     public void HiloUso()
     {
         Simulacion simulacion= new Simulacion();
-        int rta = simulacion.SimularConHilos(bolillero,[0,1,2,3,4,5,6,7,8,9],100,50);
+        int rta = simulacion.SimularConHilos(bolillero,[0,1,2,3,4,5,6,7,8,9],100,100);
         Assert.Equal(100, rta);
     }
 }

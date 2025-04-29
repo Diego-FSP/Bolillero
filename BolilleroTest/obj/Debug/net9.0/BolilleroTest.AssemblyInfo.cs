@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BolilleroTest")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d295b4979a47f9eff6a8e09046b8c4f0a4b8aea6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+21eda8de59c0860f03823f41856166fef31a9d5c")]
 [assembly: System.Reflection.AssemblyProductAttribute("BolilleroTest")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BolilleroTest")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
