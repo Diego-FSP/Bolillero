@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\Lab15-PC01\\Documents\\GitHub\\Bolillero\\BolilleroCore\\BolilleroCore.csproj": {}
+    "C:\\Users\\NOTEBOOK\\Documents\\GitHub\\Bolillero\\BolilleroCore\\BolilleroCore.csproj": {}
   },
   "projects": {
-    "c:\\Users\\Lab15-PC01\\Documents\\GitHub\\Bolillero\\BolilleroCore\\BolilleroCore.csproj": {
+    "C:\\Users\\NOTEBOOK\\Documents\\GitHub\\Bolillero\\BolilleroCore\\BolilleroCore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Lab15-PC01\\Documents\\GitHub\\Bolillero\\BolilleroCore\\BolilleroCore.csproj",
+        "projectUniqueName": "C:\\Users\\NOTEBOOK\\Documents\\GitHub\\Bolillero\\BolilleroCore\\BolilleroCore.csproj",
         "projectName": "BolilleroCore",
-        "projectPath": "c:\\Users\\Lab15-PC01\\Documents\\GitHub\\Bolillero\\BolilleroCore\\BolilleroCore.csproj",
-        "packagesPath": "C:\\Users\\Lab15-PC01\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Lab15-PC01\\Documents\\GitHub\\Bolillero\\BolilleroCore\\obj\\",
+        "projectPath": "C:\\Users\\NOTEBOOK\\Documents\\GitHub\\Bolillero\\BolilleroCore\\BolilleroCore.csproj",
+        "packagesPath": "C:\\Users\\NOTEBOOK\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\NOTEBOOK\\Documents\\GitHub\\Bolillero\\BolilleroCore\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Lab15-PC01\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\NOTEBOOK\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -66,7 +65,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
