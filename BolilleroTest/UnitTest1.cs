@@ -1,6 +1,7 @@
 ﻿namespace BolilleroTest;
 using LogicaClass;
 using BolilleroClass;
+using System.Threading.Tasks;
 
 public class BolilleroTest
 {
@@ -77,6 +78,13 @@ public class BolilleroTest
     {
         Simulacion simulacion= new Simulacion();
         int rta = simulacion.SimularConHilos(bolillero,[0,1,2,3,4,5,6,7,8,9],100,100);
+        Assert.Equal(100, rta);
+    }
+    [Fact]
+    public async Task HiloUsoAsync()
+    {
+        Simulacion simulacion= new Simulacion();
+        int rta = await simulacion.SimularConHilosAsync(bolillero,[0,1,2,3,4,5,6,7,8,9],100,100);
         Assert.Equal(100, rta);
     }
 }

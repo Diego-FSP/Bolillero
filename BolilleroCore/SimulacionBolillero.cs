@@ -29,4 +29,27 @@ public class Simulacion
         }
         return gano;
     }
+
+//ASYNC|-----------------------------------------------------------------------------------------------------------------------------------------------------
+    public async Task<int> SimularConHilosAsync(Bolillero bolillero, List<int> Jugada, int CVeces, int CHilos)
+    {
+        int gano=0;
+        Task<int>[] tareas= new Task<int>[CHilos];
+        
+        for(int h=0;h<CHilos;h++)
+        {
+            //Bolillero b = bolillero;
+            tareas[h]= Task.Run<int>(()=> bolillero.Clonar().JugarNVeces(Jugada,CVeces / CHilos));
+        }
+
+        await Task.WhenAll(tareas);
+        
+
+        for(int h=0;h<CHilos;h++)
+        {
+            gano+=tareas[h].Result;
+        }
+        return gano;
+    }
+//|----------------------------------------------------------------------------------------------------------------------------------------------------------
 }
