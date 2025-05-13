@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BolilleroCore")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+21eda8de59c0860f03823f41856166fef31a9d5c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2d791128df67620b42c3df5b3d826beea3ec84d4")]
 [assembly: System.Reflection.AssemblyProductAttribute("BolilleroCore")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BolilleroCore")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
