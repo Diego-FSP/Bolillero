@@ -51,5 +51,26 @@ public class Simulacion
         }
         return gano;
     }
+
+    public async Task<int> SimularParallelAsync(Bolillero bolillero, List<int> Jugada, int CVeces, int CHilos)
+    {
+        int gano=0;
+        int[] jugadas= new int[CHilos];
+        await Task.Run( () =>
+            Parallel.For(0,
+            CHilos, 
+            i=>
+                {                    
+                    jugadas[i] =+ bolillero.Clonar().JugarNVeces(Jugada,CVeces/CHilos);
+                    
+                }
+            )
+        );
+
+        for(int c=0;c<CHilos;c++)
+        gano+=jugadas[c];
+        
+        return gano;
+    }
 //|----------------------------------------------------------------------------------------------------------------------------------------------------------
 }

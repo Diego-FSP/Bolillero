@@ -87,4 +87,12 @@ public class BolilleroTest
         int rta = await simulacion.SimularConHilosAsync(bolillero,[0,1,2,3,4,5,6,7,8,9],100,100);
         Assert.Equal(100, rta);
     }
+
+[Fact]
+    public async Task UsoParallel()
+    {
+        Simulacion simulacion = new Simulacion();
+        int rta = await simulacion.SimularParallelAsync(bolillero,[0,1,2,3,4,5,6,7,8,9],50,50);
+        Assert.Equal(50, rta);
+    }
 }
